@@ -1,0 +1,36 @@
+.user-wrapper{
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+}
+
+.user{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 0;
+    display: none;
+   
+}
+
+.user > a, p{
+    margin-left: 10px;
+    color: black;
+    font-size: .8rem;
+}
+
+.user a:hover{
+    color:rgb(92, 92, 92);
+}
+
+.user a:last-of-type{
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: 5px 8px;
+}
+
+.user a:last-of-type:hover{
+    background-color: rgb(224, 223, 223);
+    
+}

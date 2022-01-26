@@ -1,0 +1,93 @@
+.outer-wrapper{
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desk-filters{
+    display: none;
+    margin-right: 50px;
+    position: relative;
+}
+
+.desk-filtersAnimated{
+    animation: deskFilters .4s ease;
+}
+
+@keyframes deskFilters {
+    0%{
+        left: -100px;
+    }
+
+    100%{
+        left: 0;
+    }
+}
+
+.desk-filtersHide{
+    display: none;
+}
+
+.desk-filters li+li{
+    margin-top: 15px;
+}
+
+.desk-filters a{
+    color: black;
+}
+
+.desk-filters [type="checkbox"]{
+    margin: 5px 0;
+}
+
+.wrapper{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.wrapperAnimated{
+   animation: wrapper .3s ease forwards;
+}   
+
+@keyframes wrapper {
+    0%{
+        width: 90%;
+    }
+
+    100%{
+       width: 100%;
+    }
+}
+
+.item-desc{
+    margin: 0px auto;
+    width: 90%;
+}
+
+.item-desc p{
+    font-size: 1rem;
+    margin: 10px 0;
+    color: black;
+}
+
+.item-desc p:nth-of-type(1){
+    color: rgb(250, 84, 0);
+}
+
+.item-desc p:nth-of-type(3), .item-desc p:nth-of-type(4){
+    color: rgb(139, 139, 139);
+}
+
+.item-desc p:last-of-type{
+    margin-top: 25px;
+}
+
+.item img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
