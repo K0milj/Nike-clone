@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+//Components imports
 import User from './components/User'
 import NavDesk from './components/NavDesk'
 import NavMob from './components/NavMob'

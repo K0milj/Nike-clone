@@ -1,25 +1,7 @@
 import React from 'react';
-
 import Item from './Item';
 
-const firstShoe = {
-    imgUrl: "./imgs/nike-shoe.jfif",
-    msg: "Just In",
-    shoeName: "Nike Lebron IX",
-    shoeGender: "Men's Shoe",
-    colorCount: 1,
-    price: 95
-}
-
-const secondShoe = {
-    imgUrl: "./imgs/nike-shoe2.jfif",
-    msg: "Best Seller",
-    shoeName: "Nike Airmax 90",
-    shoeGender: "Men's Shoe",
-    colorCount: 4,
-    price: 125
-}
-
+import { shoes } from '../shoes'
 
 function ItemsWrapper() {
     return (
@@ -72,46 +54,11 @@ function ItemsWrapper() {
                 <br />
             </div>
             <div className="wrapper" id="wrapper">
-                <Item
-                    imgUrl={firstShoe.imgUrl}
-                    msg={firstShoe.msg}
-                    shoeName={firstShoe.shoeName}
-                    shoeGender={firstShoe.shoeGender}
-                    colorCount={firstShoe.colorCount}
-                    price={firstShoe.price}
-                />
-                <Item
-                    imgUrl={secondShoe.imgUrl}
-                    msg={secondShoe.msg}
-                    shoeName={secondShoe.shoeName}
-                    shoeGender={secondShoe.shoeGender}
-                    colorCount={secondShoe.colorCount}
-                    price={secondShoe.price}
-                />
-                <Item
-                    imgUrl={secondShoe.imgUrl}
-                    msg={secondShoe.msg}
-                    shoeName={secondShoe.shoeName}
-                    shoeGender={secondShoe.shoeGender}
-                    colorCount={secondShoe.colorCount}
-                    price={secondShoe.price}
-                />
-                <Item
-                    imgUrl={firstShoe.imgUrl}
-                    msg={firstShoe.msg}
-                    shoeName={firstShoe.shoeName}
-                    shoeGender={firstShoe.shoeGender}
-                    colorCount={firstShoe.colorCount}
-                    price={firstShoe.price}
-                />
-                <Item
-                    imgUrl={secondShoe.imgUrl}
-                    msg={secondShoe.msg}
-                    shoeName={secondShoe.shoeName}
-                    shoeGender={secondShoe.shoeGender}
-                    colorCount={secondShoe.colorCount}
-                    price={secondShoe.price}
-                />
+                {shoes.map(shoe => {
+                    return (
+                        <Item {...shoe} key={shoe.id} />
+                    )
+                })}
             </div>
         </div>
     )
